@@ -1,0 +1,43 @@
+@page {
+    margin-top: 1.5cm;
+    margin-right: 2cm;
+    size: A4;
+
+    @bottom-right {
+        content: counter(page) " of " counter(pages);
+    }
+
+}
+
+html {
+    font-family: system-ui;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 0rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-information {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    font-size: 0.8rem;
+}
+
+.additional-information {
+    margin-top: 0;
+}
