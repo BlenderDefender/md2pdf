@@ -6,12 +6,18 @@ A Markdown to PDF converter based on Pandoc (and weasyprint), inspired by [spawn
 
 ### Dependencies
 
-If you want to use KaTeX, you need to download the release files [from the KaTeX GitHub repository](https://github.com/KaTeX/KaTeX/releases) and extract them to `./katex`.
+If you want to use KaTeX, you need to download the release files [from the KaTeX GitHub repository](https://github.com/KaTeX/KaTeX/releases), extract them to `./katex` and update `Dockerfile`.
 
 ### Docker
 
 It's recommended to use this tool from within a Docker container.
-First, build an image by executing the following command:
+There is a pre-built image available on Dockerhub, you can pull it with
+
+```sh
+sudo docker pull blenderdefender/md2pdf
+```
+
+You can manually build an image by cloning this repository and executing the following command:
 
 ```sh
 sudo docker build -t md2pdf .
@@ -23,7 +29,8 @@ After building the image, you can run it in a shell and attach the examples dire
 sudo docker run -it -v $(pwd)/examples:/app md2pdf bash
 ```
 
-To generate a PDF version of the example CV, run 
+To generate a PDF version of the example CV, run
+
 ```sh
 md2pdf cv.md cv.css
 ```
